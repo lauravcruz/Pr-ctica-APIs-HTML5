@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head></head>
+<title>Práctica API</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div id="fondo">
+        <div id = "titulo">
+        <p>Pulse examinar para cargar el vídeo</p>
+        <label class="boton"> <!--Con el label podemos cambiar el estilo del botón de "Examinar"-->
+            <input type="file" name="file" id="file" accept=".webm,.mp4,.ogv">Examinar</input>
+        </label>
+    </div>
+
+        <figure style="text-align: center"> <!--Centramos el vídeo y le ponemos la etiqueta figure para que el navegador sepa que ahí hay un multimedia-->
+            <video id="video" width="620"></video>
+        </figure>
+
+        <div id="botones">
+            <button class="boton" onclick="document.getElementById('video').play();">Reproducir</button>
+            <button class="boton" onclick="document.getElementById('video').pause();">Pausa</button>
+            <button class="boton" onclick = "volumen('up')">Volumen +</button>
+            <button class="boton" onclick= "volumen('down')">Volumen -</button>
+        </div>
+
+        <script src="script.js"></script>
+    </div>
+</body>
+
+</html>
